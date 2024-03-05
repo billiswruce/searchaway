@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const cors = require("cors");
 const pics = [
   {
     user: "user",
@@ -34,8 +34,11 @@ const pics = [
   },
 ];
 
+app.use(cors());
+app.use(express.json());
+
 app.get("/pics", (req, res) => {
   res.json(pics);
 });
 
-app.listen(3000, () => console.log("server started"));
+app.listen(3001, () => console.log("server started"));
