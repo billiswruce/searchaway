@@ -47,6 +47,7 @@
 
 const express = require("express");
 const cors = require("cors");
+const colors = require("colors");
 
 const app = express();
 
@@ -55,9 +56,9 @@ app.use(express.json());
 
 const pics = [];
 
-app.post("/api/user/pics/save", (req, res) => {
+app.post("/api/user/savepic", (req, res) => {
   pics.push(req.body);
   res.status(201).json(pics);
 });
 
-app.listen(3001, () => console.log("server started"));
+app.listen(3001, () => console.log("server started".rainbow.bold));

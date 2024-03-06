@@ -1,33 +1,12 @@
 
-GET http://localhost:3001/api/user/pics/save
+# GET http://localhost:3001/pics
+
+POST http://localhost:3001/api/user/savepic
 Content-type: application/json 
 
-{
+   
       {
-   user: "user",
-    favoritepic: [
-      {
-        title: "picture1",
-        byteSize: 1000,
-        url: "https://www.google.com",
-      },     ],  },   {
-//     user: "user2",
-//     favoritepic: [
-//       {
-//         title: "picture2",
-//         byteSize: 1000,
-//         url: "https://www.google.com",
-//       },
-//     ],
-//   },
-//   {
-//     user: "user3",
-//     favoritepic: [
-//       {
-//         title: "picture3",
-//         byteSize: 1000,
-//         url: "https://www.google.com",
-//       },
-//     ],
-//   },
-}
+        "title": "picture1",
+        "byteSize": 1000,
+        "url": "https://www.google.com"
+      }
