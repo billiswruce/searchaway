@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
+import Navbar from "./components/NavBar";
 
 const fetchData = async () => {
   try {
@@ -7,7 +8,7 @@ const fetchData = async () => {
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
-    const data = await response.json(); // Fixa här: .json() är en metod och måste anropas
+    const data = await response.json();
     console.log(data);
   } catch (error) {
     console.error("There was a problem with fetch operation:", error);
@@ -17,9 +18,13 @@ const fetchData = async () => {
 function App() {
   useEffect(() => {
     fetchData();
-  }, []); // Den tomma beroendearrayen gör att effekten endast körs en gång
+  }, []);
 
-  return <div></div>; // Eller din önskade JSX-struktur
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
