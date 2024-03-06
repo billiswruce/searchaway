@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+.profileimg {
+  width: 40px;
+}
+
+.navbar {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f1eae1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.navbar img {
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.navbar button {
+  margin-left: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 300ms;
+  background-color: rgb(255, 165, 192);
+}
