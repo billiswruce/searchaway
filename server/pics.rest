@@ -1,12 +1,18 @@
+### Hämta en användares favoritbilder
+# Notera: Ersätt 'username' med faktiskt användarnamn i din databas
+GET http://localhost:3001/api/user/username/favorites
 
-# GET http://localhost:3001/pics
-
+### Spara en användares favoritbild
 POST http://localhost:3001/api/user/savepic
-Content-type: application/json 
+Content-Type: application/json
 
-   
-      {
-        "title": "picture1",
-        "byteSize": 1000,
-        "url": "https://www.google.com"
-      }
+{
+  "user": "userExample",
+  "favoritePics": [
+    {
+      "title": "picture1",
+      "byteSize": 1000,
+      "url": "https://www.google.com"
+    }
+  ]
+}
