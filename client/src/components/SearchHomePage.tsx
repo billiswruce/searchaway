@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { SearchBar } from "./SearchBar";
 import LoginButton from "./LoginButton";
@@ -40,8 +40,17 @@ export const SearchHomePage = () => {
           {searchTime && <p>The search took {searchTime} seconds</p>}
           {spelling && (
             <p>
-              Menade du{" "}
-              <button onClick={handleSpellingClick}>{spelling}</button>?
+              Did you mean{" "}
+              <span
+                style={{
+                  cursor: "pointer",
+                  color: "blue",
+                  textDecoration: "underline",
+                }}
+                onClick={handleSpellingClick}>
+                {spelling}
+              </span>
+              ?
             </p>
           )}
           <div className="image-grid">
