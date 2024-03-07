@@ -1,5 +1,4 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "./LoginButton"; // Kontrollera att sökvägen är korrekt
 import LogoutButton from "./LogoutButton"; // Kontrollera att sökvägen är korrekt
 // import ThemeToggleButton from "./ThemeToggleBtn";
 
@@ -13,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div style={{ display: "flex", alignItems: "center" }}>
-        {isAuthenticated ? (
+        {isAuthenticated && (
           <>
             <img
               src={user?.picture}
@@ -22,10 +21,7 @@ const Navbar = () => {
             />
             <LogoutButton />
           </>
-        ) : (
-          <LoginButton />
         )}
-        {/* <ThemeToggleButton /> */}
       </div>
     </nav>
   );
