@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/NavBar";
-import { Home } from "./components/SearchHome";
+import { SearchHomePage } from "./components/SearchHomePage";
 
+//asynkron datahämtning från servern med fetch och async/await och errorhantering.
 const fetchData = async () => {
   try {
     const response = await fetch("http://localhost:3001/api/user/savepic");
@@ -16,6 +17,7 @@ const fetchData = async () => {
   }
 };
 
+//useEffect kör bara fetchData en gång, när komponenten renderas för första gången pga beroendearrayen är tom.
 function App() {
   useEffect(() => {
     fetchData();
@@ -24,7 +26,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />
+      <SearchHomePage />
     </>
   );
 }
