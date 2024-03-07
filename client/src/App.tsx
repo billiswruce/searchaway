@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/NavBar";
+import { Home } from "./components/SearchHome";
 
 const fetchData = async () => {
   try {
-    const response = await fetch("http://localhost:3001/pics");
+    const response = await fetch("http://localhost:3001/api/user/savepic");
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Home />
     </>
   );
 }
