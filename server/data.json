@@ -41,6 +41,11 @@
         "title": "My Favorite Picture",
         "byteSize": 1000,
         "url": "https://www.example.com/image.jpg"
+      },
+      {
+        "title": "My Favorite Picture",
+        "byteSize": 1000,
+        "url": "https://www.example.com/image.jpg"
       }
     ]
   },
