@@ -29,7 +29,6 @@ app.post("/api/users/favorites", (req, res) => {
           .status(500)
           .json({ message: "Det uppstod ett fel vid sparande av data." });
       }
-      console.log("Data skickades framgångsrikt till data.json");
       res.status(201).json({ message: "Data sparades framgångsrikt." });
     });
   });
