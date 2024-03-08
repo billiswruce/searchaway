@@ -1,55 +1,38 @@
-const colors = require("colors");
+const color = require("colors");
+const fs = require("fs");
 const express = require("express");
 const cors = require("cors");
-const { favPicSchema } = require("./schemas/favpic.schema");
-const { readData, writeData } = require("./picsHandler");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Funktion för att spara användares favoritbilder
-async function saveFavorites(userId, favorites) {
-  const data = await readData();
-  const userIndex = data.findIndex((u) => u.userId === userId);
+app.post("/api/users/favorites", (req, res) => {
+  console.log("data.json", req.body);
 
-  if (userIndex > -1) {
-    if (!data[userIndex].favorites) {
-      data[userIndex].favorites = [];
+  fs.readFile("data.json", "utf8", (err, fileData) => {
+    if (err) {
+      console.error("Det uppstod ett fel vid läsning av befintlig data:", err);
+      return res
+        .status(500)
+        .send({ message: "Det uppstod ett fel vid sparande av data." });
     }
-    data[userIndex].favorites.push(...favorites);
-  } else {
-    data.push({ userId, favorites });
-  }
 
-  await writeData(data);
-}
+    const users = JSON.parse(fileData);
 
-app.post("/api/users/favorites", async (req, res) => {
-  const { userId, favorites } = req.body;
+    users.push(req.body);
 
-  const { error } = favPicSchema.validate(req.body);
-  if (error) {
-    return res.status(400).json({ message: error.details[0].message });
-  }
-
-  await saveFavorites(userId, favorites);
-  res.status(201).json({ message: "Favorite picture(s) saved successfully." });
-});
-
-app.get("/api/users/favorites/:userId", async (req, res) => {
-  const { userId } = req.params;
-
-  const data = await readData();
-  const userData = data.find((u) => u.userId === userId);
-
-  if (!userData || !userData.favorites) {
-    return res
-      .status(404)
-      .json({ message: "User not found or no favorite pictures." });
-  }
-
-  res.json(userData.favorites);
+    fs.writeFile("data.json", JSON.stringify(users), (writeErr) => {
+      if (writeErr) {
+        console.error("Det uppstod ett fel vid sparande av data:", writeErr);
+        return res
+          .status(500)
+          .json({ message: "Det uppstod ett fel vid sparande av data." });
+      }
+      console.log("Data skickades framgångsrikt till data.json");
+      res.status(201).json({ message: "Data sparades framgångsrikt." });
+    });
+  });
 });
 
 app.listen(3000, () => console.log("Server started on port 3000".rainbow.bold));
