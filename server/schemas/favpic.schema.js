@@ -1,14 +1,21 @@
-const joi = require("joi");
+const Joi = require("joi");
 
-const favPicSchema = joi.object({
-  userId: joi.string().required(),
-  favorites: joi.array().items(
-    joi.object({
-      title: joi.string().required(),
-      byteSize: joi.number().required(),
-      url: joi.string().uri().required(),
-    })
-  ),
+const favPicSchema = Joi.object({
+  userId: Joi.string().required(),
+  favorites: Joi.array()
+    .items(
+      Joi.object({
+        title: Joi.string().required(),
+        byteSize: Joi.number().required(),
+        link: Joi.string().uri().required(),
+      })
+    )
+    .required(),
 });
-
 module.exports = { favPicSchema };
+// const Joi = require("joi");
+
+// const favPicSchema = Joi.object({
+//   userId: Joi.string().required(),
+//   favorites: Joi.array().required(), // Tar bort .items för att inte specificera innehållet
+// });

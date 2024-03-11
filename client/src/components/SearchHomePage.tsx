@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { SearchBar } from "./SearchBar";
-import LoginButton from "./LoginButton";
+import LoginButton from "../components/LoginButton";
 import searchImages from "../models/SearchImages";
 import axios from "axios";
 import { FavPic } from "../models/FavPic";
@@ -43,7 +43,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
 
     try {
       const response = await axios.post("http://localhost:3000/users", {
-        userId: user.email,
+        userId: user.sub,
         favorites: [
           {
             title: image.title,
@@ -63,13 +63,32 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   };
 
   const handleSave = async (image: {
-    title: string;
-    byteSize: number;
-    link: string;
+    title: any;
+    byteSize?: number;
+    link: any;
+    image?: any;
   }) => {
-    // Hårdkodat värde för byteSize, ersätt med riktig logik om du kan beräkna de
+    if (!user || !user.email) return;
 
-    await saveFavorites(image);
+    try {
+      const favoriteImage = {
+        title: image.title,
+        byteSize: image.image.byteSize,
+        link: image.link,
+      };
+
+      const response = await axios.post("http://localhost:3000/users", {
+        userId: user.sub,
+        favorites: [favoriteImage],
+      });
+
+      console.log("Favorite saved successfully:", response.data);
+    } catch (error: any) {
+      console.error(
+        "Error saving favorites:",
+        error.response ? error.response.data : error
+      );
+    }
   };
 
   return (

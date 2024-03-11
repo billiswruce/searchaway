@@ -1,7 +1,7 @@
-GET http://localhost:3000/api/users/favorites/{userId}
+GET http://localhost:3000/users/:userId
 
 ### Spara en användares favoritbild
-POST http://localhost:3000/api/users/favorites
+POST http://localhost:3000/users
 Content-Type: application/json
 
 {

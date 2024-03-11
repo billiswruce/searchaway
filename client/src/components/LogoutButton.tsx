@@ -1,4 +1,3 @@
-//kod från auth0 dokumentationen som används för att logga ut
 import { useAuth0 } from "@auth0/auth0-react";
 
 const LogoutButton = () => {
