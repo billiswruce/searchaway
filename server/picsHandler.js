@@ -5,7 +5,7 @@ async function readData() {
   try {
     const data = await fs.readFile(filePath, "utf8");
     const parsedData = JSON.parse(data);
-    console.log(parsedData); // Lägg till denna loggning
+    console.log(parsedData);
     return parsedData;
   } catch (error) {
     console.error("Read error:", error);

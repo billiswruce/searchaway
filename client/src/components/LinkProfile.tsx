@@ -1,4 +1,3 @@
-//kod från auth0 med loading och profilbild
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Profile = () => {
