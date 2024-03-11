@@ -3,9 +3,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { SearchBar } from "./SearchBar";
 import LoginButton from "./LoginButton";
 import searchImages from "../models/SearchImages";
+import axios from "axios";
+import { FavPic } from "../models/FavPic";
 
-export const SearchHomePage = () => {
-  const { isAuthenticated } = useAuth0();
+export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
+  const { user, isAuthenticated } = useAuth0();
   const [images, setImages] = useState([]);
   const [searchTime, setSearchTime] = useState("");
   const [spelling, setSpelling] = useState("");
@@ -20,6 +22,7 @@ export const SearchHomePage = () => {
       } else {
         setSpelling("");
       }
+      console.log("Search results:", results.items);
     } catch (error) {
       console.error("Fetch error:", error);
     }
@@ -29,6 +32,44 @@ export const SearchHomePage = () => {
     if (spelling) {
       handleSearch(spelling);
     }
+  };
+
+  const saveFavorites = async (image: {
+    title: string;
+    byteSize: number;
+    link: string;
+  }) => {
+    if (!user || !user.email) return;
+
+    try {
+      const response = await axios.post("http://localhost:3000/users", {
+        userId: user.email,
+        favorites: [
+          {
+            title: image.title,
+            byteSize: image.byteSize,
+            url: image.link,
+          },
+        ],
+      });
+
+      console.log("Favorite saved successfully:", response.data);
+    } catch (error: any) {
+      console.error(
+        "Error saving favorites:",
+        error.response ? error.response.data : error
+      );
+    }
+  };
+
+  const handleSave = async (image: {
+    title: string;
+    byteSize: number;
+    link: string;
+  }) => {
+    // Hårdkodat värde för byteSize, ersätt med riktig logik om du kan beräkna de
+
+    await saveFavorites(image);
   };
 
   return (
@@ -55,9 +96,13 @@ export const SearchHomePage = () => {
           )}
           <div className="image-grid">
             {images.map(
-              (image: { link: string; title: string }, index: number) => (
+              (
+                image: { title: string; byteSize: number; link: string },
+                index: number
+              ) => (
                 <div key={index}>
                   <img src={image.link} alt={image.title} />
+                  <button onClick={() => handleSave(image)}>Favorite!</button>
                 </div>
               )
             )}

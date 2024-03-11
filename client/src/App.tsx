@@ -38,6 +38,7 @@ function App() {
 
   useEffect(() => {
     if (isAuthenticated && user) {
+      // Exempel på favoritbilder (att ersätta med dina egna favoritbilder)
       const favorites = [
         {
           title: "My Favorite Picture",
@@ -46,9 +47,9 @@ function App() {
         },
       ];
 
-      saveUserFavorites(user.sub, favorites);
+      saveUserFavorites(user.sub, favorites); // Använd user.sub som identifierare
     }
-  }, [user, isAuthenticated]);
+  }, [user, isAuthenticated]); // Kör effekten när user eller isAuthenticated ändras
 
   return (
     <>

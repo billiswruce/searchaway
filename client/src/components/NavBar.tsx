@@ -1,5 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./LogoutButton"; // Kontrollera att sökvägen är korrekt
+import { FavPics } from "./FavPics";
 // import ThemeToggleButton from "./ThemeToggleBtn";
 
 const Navbar = () => {
@@ -21,6 +22,7 @@ const Navbar = () => {
               style={{ marginRight: "8px" }}
             />
             <LogoutButton />
+            <FavPics />
           </>
         )}
       </div>
