@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <SearchHomePage />
+      <SearchHomePage results={[]} />
     </>
   );
 }
