@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
-import { useNavigate } from "react-router-dom"; // Lägg till denna import
+import { useNavigate } from "react-router-dom";
+import heart2 from "../img/heart2.svg";
+import trash from "../img/trash.svg"; // Se till att sökvägen till din bild är korrekt
 
 const Favorites = () => {
   const { user } = useAuth0();
   const [favoriteImages, setFavoriteImages] = useState<
     { title: string; link: string }[]
   >([]);
-  const navigate = useNavigate(); // Använd useNavigate för att skapa en navigate-funktion
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!user || !user.sub) return;
@@ -33,19 +35,30 @@ const Favorites = () => {
 
   return (
     <div>
+      <img
+        src={heart2}
+        alt="Favorite"
+        style={{ width: "40px", height: "40px" }}
+      />
       <h2>Your Favorites!</h2>
       <button onClick={() => navigate(-1)} style={{ marginBottom: "20px" }}>
-        Go back to search
-      </button>{" "}
+        Go back to Search
+      </button>
       <div className="image-grid2">
         {favoriteImages.map((image, index) => (
-          <div key={index}>
-            <h3>{image.title}</h3>
-            <img
-              src={image.link}
-              alt={image.title}
-              style={{ width: "200px", height: "auto" }}
-            />
+          <div key={index} className="image-container">
+            <img src={image.link} alt={image.title} className="image" />
+            <button
+              onClick={() => deleteFavorite(image.link)}
+              className="delete-button"
+              style={{ alignSelf: "flex-end" }} // Tillämpa denna stil om nödvändigt
+            >
+              <img
+                src={trash}
+                alt="Delete"
+                style={{ width: "20px", height: "20px" }}
+              />
+            </button>
           </div>
         ))}
       </div>

@@ -78,16 +78,18 @@
 .image-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Justerar barn-element (knappen) till höger */
+  align-items: flex-end;
 }
 
 .image {
   display: block;
   width: 100%;
-  margin-bottom: 5px; /* Ger lite utrymme mellan bilden och hjärtknappen */
+  margin-bottom: 5px;
+  border-radius: 5px;
 }
 
-.favorite-button {
+.favorite-button,
+.delete-button {
   background: none;
   border: none;
   cursor: pointer;
