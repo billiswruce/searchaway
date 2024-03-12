@@ -112,7 +112,11 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               )
             )}
           </div>
-          {searchTime && <p>The search took {searchTime} seconds</p>}
+          {searchTime && (
+            <p style={{ color: "#53a064", fontWeight: "bold" }}>
+              The search took {searchTime} seconds
+            </p>
+          )}
         </>
       ) : (
         <>
