@@ -39,7 +39,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     byteSize: number;
     link: string;
   }) => {
-    if (!user || !user.email) return;
+    if (!user || !user.sub) return;
 
     try {
       const response = await axios.post("http://localhost:3000/users", {
@@ -48,7 +48,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
           {
             title: image.title,
             byteSize: image.byteSize,
-            url: image.link,
+            link: image.link,
           },
         ],
       });
@@ -68,15 +68,26 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     link: any;
     image?: any;
   }) => {
-    if (!user || !user.email) return;
+    if (!user || !user.sub || !image.image.byteSize) {
+      console.error(
+        "Attempted to save image without required fields. Image:",
+        image
+      );
+      return;
+    }
+
+    const favoriteImage = {
+      title: image.title,
+      byteSize: image.image.byteSize,
+      link: image.link,
+    };
+
+    console.log("Saving favorite image:", {
+      userId: user.sub,
+      favorites: [favoriteImage],
+    });
 
     try {
-      const favoriteImage = {
-        title: image.title,
-        byteSize: image.image.byteSize,
-        link: image.link,
-      };
-
       const response = await axios.post("http://localhost:3000/users", {
         userId: user.sub,
         favorites: [favoriteImage],

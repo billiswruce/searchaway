@@ -20,6 +20,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "LoginButton.tsx"],
+  "include": [
+    "src",
+    "LoginButton.tsx",
+    "src/components/FavPics.tsx",
+    "src/components/SearchHomePage.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
