@@ -1,7 +1,7 @@
 GET http://localhost:3000/users/:userId
 
 ### Spara en användares favoritbild
-POST http://localhost:3000/users
+POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
@@ -10,7 +10,7 @@ Content-Type: application/json
     {
       "title": "picture1",
       "byteSize": 1000,
-      "url": "https://www.google.com"
+      "link": "https://www.google.com"
     }
   ]
 }

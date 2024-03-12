@@ -1,172 +1,66 @@
 [
   {
-    "userId": "hello.jessicatell@gmail.com",
+    "userId": "google-oauth2|106945575800221420058",
     "favorites": [
       {
-        "title": "Joker (2019) - IMDb",
-        "byteSize": 1691185,
-        "link": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
+        "title": "What is the lifespan of a Holstein cow? - ABS Global UK",
+        "byteSize": 516534,
+        "link": "https://www.absglobal.com/uk/wp-content/uploads/sites/14/2023/03/RS13597_DAUGHTER-DENOVO-SAUCY.jpg"
+      },
       {
-        "title": "Joker (2019) - IMDb",
-        "byteSize": 1691185,
-        "link": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
+        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
+        "byteSize": 541116,
+        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+      },
       {
-        "title": "Joker (2019) - IMDb",
-        "byteSize": 1691185,
-        "link": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
+        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
+        "byteSize": 541116,
+        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+      },
       {
-        "title": "What exactly is the problem with Joaquin Phoenix Joker? : r/batman",
-        "byteSize": 317206,
-        "link": "https://preview.redd.it/what-exactly-is-the-problem-with-joaquin-phoenix-joker-v0-hvg746l8kumb1.jpg?width=1080&crop=smart&auto=webp&s=3bbaf677d2f8dc9fd4bbeec1470decd1c8c966c1"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
+        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
+        "byteSize": 541116,
+        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+      },
       {
-        "title": "What exactly is the problem with Joaquin Phoenix Joker? : r/batman",
-        "byteSize": 317206,
-        "link": "https://preview.redd.it/what-exactly-is-the-problem-with-joaquin-phoenix-joker-v0-hvg746l8kumb1.jpg?width=1080&crop=smart&auto=webp&s=3bbaf677d2f8dc9fd4bbeec1470decd1c8c966c1"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Joaquin Phoenix Joker Suit - Hockerty",
-        "byteSize": 247670,
-        "link": "https://d1fufvy4xao6k9.cloudfront.net/images/blog/posts/2024/01/screenshot_14.png"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Joaquin Phoenix Joker Suit - Hockerty",
-        "byteSize": 247670,
-        "link": "https://d1fufvy4xao6k9.cloudfront.net/images/blog/posts/2024/01/screenshot_14.png"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Leopold Mozart - Wikipedia",
-        "byteSize": 171997,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/4/45/Leopold_Mozart.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Wolfgang Amadeus Mozart | Biography, Music, The Magic Flute ...",
-        "byteSize": 216175,
-        "link": "https://cdn.britannica.com/35/74835-050-F0B71060/canvas-oil-Wolfgang-Amadeus-Mozart-Barbara-Krafft-1819.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Wolfgang Amadeus Mozart | Biography, Music, The Magic Flute ...",
-        "byteSize": 14610,
-        "link": "https://cdn.britannica.com/91/193391-138-EB007127/Richard-Haier-plasticity-human-intelligence-notion-effect.jpg?w=400&h=225&c=crop"
-      }
-    ]
-  },
-  {},
-  {
-    "userId": "exampleID",
-    "favorites": [
-      {
-        "title": "picture1",
-        "byteSize": 1000,
-        "url": "https://www.google.com"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
-      {
-        "title": "Cattle - Wikipedia",
-        "byteSize": 401320,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/1200px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "hello.jessicatell@gmail.com",
-    "favorites": [
+        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
+        "byteSize": 541116,
+        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+      },
       {
         "title": "Cow | Description, Heifer, & Facts | Britannica",
         "byteSize": 314174,
         "link": "https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg"
+      },
+      {
+        "title": "Vanilla ice cream experiment yields solid scoop with creamy ...",
+        "byteSize": 76829,
+        "link": "https://ca-times.brightspotcdn.com/dims4/default/607dcd1/2147483647/strip/true/crop/3000x1688+0+156/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9f%2F9a%2Fd4eb0d5b41aa8ca1976571a93f10%2Ffood-icecream-7c85c63a-f3f2-11ec-a9c7-cbc274649d15.jpg"
       }
     ]
   },
   {
-    "userId": "hello.jessicatell@gmail.com",
+    "userId": "github|98770226",
     "favorites": [
       {
-        "title": "What is the lifespan of a Holstein cow? - ABS Global UK",
-        "byteSize": 516534,
-        "link": "https://www.absglobal.com/uk/wp-content/uploads/sites/14/2023/03/RS13597_DAUGHTER-DENOVO-SAUCY.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "google-oauth2|106945575800221420058",
-    "favorites": [
+        "title": "Depeche Mode - Wikipedia",
+        "byteSize": 7567168,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/7/78/Depeche_mode_in_portland_Nov_2023.jpg"
+      },
       {
-        "title": "Cattle - Wikipedia",
-        "byteSize": 401320,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/1200px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "google-oauth2|106945575800221420058",
-    "favorites": [
+        "title": "Mode: What It Is in Statistics and How to Calculate It",
+        "byteSize": 88636,
+        "link": "https://www.investopedia.com/thmb/BaG88nr2aZ7JqqED2fT9aaJpqn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Term-Definitions_Mode-c32efe37b0f6436bae3d5af176322e9e.jpg"
+      },
       {
-        "title": "Cattle - Wikipedia",
-        "byteSize": 401320,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/1200px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
-      }
-    ]
-  },
-  {
-    "userId": "google-oauth2|106945575800221420058",
-    "favorites": [
+        "title": "Mode | Definition & Examples - Lesson | Study.com",
+        "byteSize": 29832,
+        "link": "https://study.com/cimages/videopreview/5stw5697d1.jpg"
+      },
       {
-        "title": "What is the lifespan of a Holstein cow? - ABS Global UK",
-        "byteSize": 516534,
-        "link": "https://www.absglobal.com/uk/wp-content/uploads/sites/14/2023/03/RS13597_DAUGHTER-DENOVO-SAUCY.jpg"
+        "title": "Mode (statistics) - Wikipedia",
+        "byteSize": 20748,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Comparison_mean_median_mode.svg/300px-Comparison_mean_median_mode.svg.png"
       }
     ]
   }
