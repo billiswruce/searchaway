@@ -1,16 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { SearchBar } from "./SearchBar";
 import LoginButton from "../components/LoginButton";
 import searchImages from "../models/SearchImages";
 import axios from "axios";
 import { FavPic } from "../models/FavPic";
+import heart1 from "../img/heart1.svg";
+import heart2 from "../img/heart2.svg";
 
 export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   const { user, isAuthenticated } = useAuth0();
   const [images, setImages] = useState([]);
   const [searchTime, setSearchTime] = useState("");
   const [spelling, setSpelling] = useState("");
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const isFavorite = (imageLink: string) => favorites.has(imageLink);
 
   const handleSearch = async (searchTerm: string) => {
     try {
@@ -41,16 +45,20 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   }) => {
     if (!user || !user.sub) return;
 
+    const updatedFavorites = new Set(favorites);
+    updatedFavorites.add(image.link);
+    setFavorites(updatedFavorites);
+
     try {
+      const favoriteObject = {
+        title: image.title,
+        byteSize: image.image.byteSize,
+        link: image.link,
+      };
+
       const response = await axios.post("http://localhost:3000/users", {
         userId: user.sub,
-        favorites: [
-          {
-            title: image.title,
-            byteSize: image.byteSize,
-            link: image.link,
-          },
-        ],
+        favorites: [favoriteObject],
       });
 
       console.log("Favorite saved successfully:", response.data);
@@ -61,47 +69,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       );
     }
   };
-
-  const handleSave = async (image: {
-    title: any;
-    byteSize?: number;
-    link: any;
-    image?: any;
-  }) => {
-    if (!user || !user.sub || !image.image.byteSize) {
-      console.error(
-        "Attempted to save image without required fields. Image:",
-        image
-      );
-      return;
-    }
-
-    const favoriteImage = {
-      title: image.title,
-      byteSize: image.image.byteSize,
-      link: image.link,
-    };
-
-    console.log("Saving favorite image:", {
-      userId: user.sub,
-      favorites: [favoriteImage],
-    });
-
-    try {
-      const response = await axios.post("http://localhost:3000/users", {
-        userId: user.sub,
-        favorites: [favoriteImage],
-      });
-
-      console.log("Favorite saved successfully:", response.data);
-    } catch (error: any) {
-      console.error(
-        "Error saving favorites:",
-        error.response ? error.response.data : error
-      );
-    }
-  };
-
   return (
     <div style={{ textAlign: "center" }}>
       {isAuthenticated ? (
@@ -127,12 +94,20 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
           <div className="image-grid">
             {images.map(
               (
-                image: { title: string; byteSize: number; link: string },
+                image: { link: string; title: string; byteSize: number },
                 index: number
               ) => (
-                <div key={index}>
-                  <img src={image.link} alt={image.title} />
-                  <button onClick={() => handleSave(image)}>Favorite!</button>
+                <div key={index} className="image-container">
+                  <img src={image.link} alt={image.title} className="image" />
+                  <button
+                    onClick={() => saveFavorites(image)}
+                    className="favorite-button">
+                    <img
+                      src={isFavorite(image.link) ? heart2 : heart1}
+                      alt="Favorite"
+                      style={{ width: "20px", height: "20px" }}
+                    />
+                  </button>
                 </div>
               )
             )}

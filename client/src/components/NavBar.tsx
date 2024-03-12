@@ -1,10 +1,9 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./LogoutButton"; 
-import { FavPics } from "./FavPics";
-
+import LogoutButton from "./LogoutButton";
+import FavPics from "./FavPics";
 
 const Navbar = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0(); 
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -21,7 +20,7 @@ const Navbar = () => {
               style={{ marginRight: "8px" }}
             />
             <LogoutButton />
-            <FavPics />
+            {/* <FavPics userId={undefined} /> */}
           </>
         )}
       </div>
