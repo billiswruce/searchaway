@@ -5,44 +5,8 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.profileimg {
-  width: 40px;
+* {
+  background-color: rgb(251, 245, 220);
 }
 
 .navbar {
@@ -100,6 +64,33 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Skapar lite utrymme mellan input-fältet och knappen */
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px; /* Rundade hörn på vänster sida */
+  outline: none;
+  width: 50%;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 5px; /* Rundade hörn på höger sida */
+  width: 100px;
+}
+
+button[type="submit"]:hover {
+  background-color: #e7e7e7;
 }
 
 /* För mindre skärmar, visa endast två bilder per rad */

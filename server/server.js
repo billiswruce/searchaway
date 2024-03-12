@@ -17,7 +17,7 @@ app.get(`/users/:userId/favorites`, async (req, res) => {
   try {
     console.log("Läser från users.json");
     const usersData = await fs.readFile(usersFilePath, "utf8");
-    console.log("Läst data från users.json:", usersData.substring(0, 100)); // Visa de första 100 tecknen för att undvika överflödig loggning
+    console.log("Läst data från users.json:", usersData.substring(0, 100));
     const users = JSON.parse(usersData);
     const userFavorites = users.find(
       (user) => user.userId === userId

@@ -7,6 +7,7 @@ import axios from "axios";
 import { FavPic } from "../models/FavPic";
 import heart1 from "../img/heart1.svg";
 import heart2 from "../img/heart2.svg";
+import icon from "../img/icon.png";
 
 export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   const { user, isAuthenticated } = useAuth0();
@@ -73,8 +74,8 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     <div style={{ textAlign: "center" }}>
       {isAuthenticated ? (
         <>
-          <h1>Search away!</h1>
-          <SearchBar onSearch={handleSearch} />
+          <img src={icon} alt="chatbubble" className="chatBubble"></img>
+          <SearchBar onSearch={handleSearch} className="searchBar" />
           {searchTime && <p>The search took {searchTime} seconds</p>}
           {spelling && (
             <p>
