@@ -76,7 +76,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
         <>
           <img src={icon} alt="chatbubble" className="chatBubble"></img>
           <SearchBar onSearch={handleSearch} className="searchBar" />
-          {searchTime && <p>The search took {searchTime} seconds</p>}
           {spelling && (
             <p>
               Did you mean{" "}
@@ -113,6 +112,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               )
             )}
           </div>
+          {searchTime && <p>The search took {searchTime} seconds</p>}
         </>
       ) : (
         <>
