@@ -11,7 +11,7 @@ app.use(express.json());
 
 const usersFilePath = "users.json";
 
-app.get("/users/:userId", async (req, res) => {
+app.get(`/users/:userId/favorites`, async (req, res) => {
   const { userId } = req.params;
   console.log("Hämtar favoritbilder för userId:", userId);
   try {

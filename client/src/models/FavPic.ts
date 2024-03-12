@@ -1,7 +1,7 @@
 export interface FavPic {
-  image: any;
-  link: string | undefined;
-  title: string | undefined;
+  // image: any;
+  // link: string | undefined;
+  // title: string | undefined;
   user: string;
   favoritePics: {
     title: string;

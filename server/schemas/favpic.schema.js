@@ -13,9 +13,3 @@ const favPicSchema = Joi.object({
     .required(),
 });
 module.exports = { favPicSchema };
-// const Joi = require("joi");
-
-// const favPicSchema = Joi.object({
-//   userId: Joi.string().required(),
-//   favorites: Joi.array().required(), // Tar bort .items för att inte specificera innehållet
-// });

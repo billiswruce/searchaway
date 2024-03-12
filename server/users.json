@@ -1,66 +1,176 @@
 [
   {
-    "userId": "google-oauth2|106945575800221420058",
+    "userId": "github|98770226",
     "favorites": [
+      {
+        "title": "Cattle - Wikipedia",
+        "byteSize": 401320,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/1200px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
+      },
+      {
+        "title": "How much milk does a Holstein cow produce a day? - ABS Global UK",
+        "byteSize": 477772,
+        "link": "http://www.absglobal.com/uk/wp-content/uploads/sites/14/2023/03/RS13596_DAUGHTER-DENOVO-SASSY.jpg"
+      },
+      {
+        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
+        "byteSize": 31262,
+        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+      },
+      {
+        "title": "Ice cream - Wikipedia",
+        "byteSize": 1767214,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Ice_cream_with_whipped_cream%2C_chocolate_syrup%2C_and_a_wafer_%28cropped%29.jpg"
+      },
+      {
+        "title": "How To Make Ice Cream | French Vanilla Ice Cream",
+        "byteSize": 285025,
+        "link": "https://handletheheat.com/wp-content/uploads/2021/06/homemade-vanilla-ice-cream.jpg"
+      },
+      {
+        "title": "Ground Beef Tacos {Easy 10 Minute Recipe!} - FeelGoodFoodie",
+        "byteSize": 72044,
+        "link": "https://feelgoodfoodie.net/wp-content/uploads/2017/04/Ground-Beef-Tacos-9.jpg"
+      },
+      {
+        "title": "Fish Tacos - Two Peas & Their Pod",
+        "byteSize": 311266,
+        "link": "https://www.twopeasandtheirpod.com/wp-content/uploads/2023/03/Fish-Tacos-0938.jpg"
+      },
+      {
+        "title": "Mountains Information and Facts | National Geographic",
+        "byteSize": 1022487,
+        "link": "https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095_4x3.jpg"
+      },
+      {
+        "title": "Stone Mountain Park",
+        "byteSize": 2029206,
+        "link": "https://stonemountainpark.com/wp-content/uploads/2023/02/SMP20_GENERAL_LodgingExterior.jpg"
+      },
+      {
+        "title": "Willem Kalf - Wikipedia",
+        "byteSize": 605229,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Willem_Kalf.jpg"
+      },
+      {
+        "title": "Willem Kalf | Baroque Art, Dutch Golden Age, Still Life | Britannica",
+        "byteSize": 32738,
+        "link": "https://cdn.britannica.com/96/36296-004-C7C794D6/Still-Life-painting-Chinese-Tureen-Willem-Kalf.jpg"
+      },
+      {
+        "title": "I liked him as Earl Kalf, it was cool to see him in this show ...",
+        "byteSize": 100203,
+        "link": "https://i.redd.it/8e4ladiugqf71.jpg"
+      },
+      {
+        "title": "Wolfgang Amadeus Mozart | Biography, Music, The Magic Flute ...",
+        "byteSize": 216175,
+        "link": "https://cdn.britannica.com/35/74835-050-F0B71060/canvas-oil-Wolfgang-Amadeus-Mozart-Barbara-Krafft-1819.jpg"
+      },
+      {
+        "title": "Leopold Mozart - Wikipedia",
+        "byteSize": 171997,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/4/45/Leopold_Mozart.jpg"
+      },
+      {
+        "title": "Rabbit - Wikipedia",
+        "byteSize": 488334,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/1200px-Oryctolagus_cuniculus_Rcdo.jpg"
+      },
+      {
+        "title": "Rabbit - Wikipedia",
+        "byteSize": 28961,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/220px-Oryctolagus_cuniculus_Rcdo.jpg"
+      },
+      {
+        "title": "Rabbit - Wikipedia",
+        "byteSize": 252582,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/800px-Oryctolagus_cuniculus_Rcdo.jpg"
+      },
+      {
+        "title": "Rabbit - Wikipedia",
+        "byteSize": 175134,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Oryctolagus_cuniculus_Rcdo.jpg/640px-Oryctolagus_cuniculus_Rcdo.jpg"
+      },
+      {
+        "title": "Eastern Cottontail Rabbit",
+        "byteSize": 802240,
+        "link": "https://i.natgeofe.com/k/58df97a7-5c47-44b8-97c1-cddecd7d4a4f/full-body-cottontail_3x4.jpg"
+      },
+      {
+        "title": "How the Rabbit was Domesticated - FOUR PAWS International - Animal ...",
+        "byteSize": 218290,
+        "link": "https://media.4-paws.org/b/a/b/2/bab2a183737a28fc77c1f67466770b29fbd72b20/Kaninchen%20im%20Freigehege%20%2858%29-4440x3072-1920x1328.jpg"
+      },
+      {
+        "title": "Eastern Cottontail Rabbit",
+        "byteSize": 802240,
+        "link": "https://i.natgeofe.com/k/58df97a7-5c47-44b8-97c1-cddecd7d4a4f/full-body-cottontail_3x4.jpg"
+      },
+      {
+        "title": "Cottontail Rabbits",
+        "byteSize": 468114,
+        "link": "https://www.massaudubon.org/var/site/storage/images/8/7/5/3/1603578-1-eng-US/4dbe82690fd1-6221Harris_Stein32217.jpg"
+      },
+      {
+        "title": "File:Kossa-2.jpg - Wikimedia Commons",
+        "byteSize": 7299107,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/1/13/Kossa-2.jpg"
+      },
+      {
+        "title": "Von Kossa kit - Biognost",
+        "byteSize": 616631,
+        "link": "https://www.biognost.com/wp-content/uploads/2017/10/Von-Kossa-kit-staining.jpg"
+      },
+      {
+        "title": "Council",
+        "byteSize": 51323,
+        "link": "https://council.org/wp-content/uploads/2023/12/Counci-logo.svg"
+      },
+      {
+        "title": "Cattle - Wikipedia",
+        "byteSize": 401320,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg/1200px-Cow_%28Fleckvieh_breed%29_Oeschinensee_Slaunger_2009-07-07.jpg"
+      },
       {
         "title": "What is the lifespan of a Holstein cow? - ABS Global UK",
         "byteSize": 516534,
         "link": "https://www.absglobal.com/uk/wp-content/uploads/sites/14/2023/03/RS13597_DAUGHTER-DENOVO-SAUCY.jpg"
       },
       {
-        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
-        "byteSize": 541116,
-        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+        "title": "trana - eBird",
+        "byteSize": 504384,
+        "link": "https://cdn.download.ams.birds.cornell.edu/api/v1/asset/168488341/1800"
       },
       {
-        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
-        "byteSize": 541116,
-        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
+        "title": "Trana - Wikipedia",
+        "byteSize": 2435302,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/7/73/Trana.JPG"
       },
       {
-        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
-        "byteSize": 541116,
-        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
-      },
-      {
-        "title": "Merry Christmas. I Got You a Tiny Cow. - The New York Times",
-        "byteSize": 541116,
-        "link": "https://static01.nyt.com/images/2023/12/22/multimedia/22MINI-COWS-qghp/22MINI-COWS-qghp-videoSixteenByNine3000.jpg"
-      },
-      {
-        "title": "Cow | Description, Heifer, & Facts | Britannica",
-        "byteSize": 314174,
-        "link": "https://cdn.britannica.com/55/174255-050-526314B6/brown-Guernsey-cow.jpg"
-      },
-      {
-        "title": "Vanilla ice cream experiment yields solid scoop with creamy ...",
-        "byteSize": 76829,
-        "link": "https://ca-times.brightspotcdn.com/dims4/default/607dcd1/2147483647/strip/true/crop/3000x1688+0+156/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9f%2F9a%2Fd4eb0d5b41aa8ca1976571a93f10%2Ffood-icecream-7c85c63a-f3f2-11ec-a9c7-cbc274649d15.jpg"
+        "title": "Trana - Wikipedia",
+        "byteSize": 319694,
+        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Trana.JPG/1200px-Trana.JPG"
       }
     ]
   },
   {
-    "userId": "github|98770226",
+    "userId": "google-oauth2|106945575800221420058",
     "favorites": [
       {
-        "title": "Depeche Mode - Wikipedia",
-        "byteSize": 7567168,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/7/78/Depeche_mode_in_portland_Nov_2023.jpg"
+        "title": "Pig",
+        "byteSize": 622286,
+        "link": "https://i.natgeofe.com/k/6d301bfc-ff93-4f6f-9179-b1f66b19b9b3/pig-young-closeup_3x4.jpg"
       },
       {
-        "title": "Mode: What It Is in Statistics and How to Calculate It",
-        "byteSize": 88636,
-        "link": "https://www.investopedia.com/thmb/BaG88nr2aZ7JqqED2fT9aaJpqn0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Term-Definitions_Mode-c32efe37b0f6436bae3d5af176322e9e.jpg"
+        "title": "Pig",
+        "byteSize": 559287,
+        "link": "https://i.natgeofe.com/k/6d301bfc-ff93-4f6f-9179-b1f66b19b9b3/pig-young-closeup_2x3.jpg"
       },
       {
-        "title": "Mode | Definition & Examples - Lesson | Study.com",
-        "byteSize": 29832,
-        "link": "https://study.com/cimages/videopreview/5stw5697d1.jpg"
-      },
-      {
-        "title": "Mode (statistics) - Wikipedia",
-        "byteSize": 20748,
-        "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Comparison_mean_median_mode.svg/300px-Comparison_mean_median_mode.svg.png"
+        "title": "What to Feed Mini & Potbellied Pig | Kalmbach Feeds",
+        "byteSize": 115495,
+        "link": "https://www.kalmbachfeeds.com/wp-content/uploads/2021/12/Mini-Pig-Article-Blog-Header-12.7.21.jpg"
       }
     ]
   }

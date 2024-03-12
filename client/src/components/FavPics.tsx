@@ -1,42 +1,31 @@
 // import React, { useState, useEffect } from "react";
 // import axios from "axios";
 // import { useAuth0 } from "@auth0/auth0-react";
-// import { FavPic } from "../models/FavPic";
 
-export const FavPics = () => {
-  // const { user } = useAuth0();
-  // const [favoritePics, setFavoritePics] = useState<FavPic[]>([]);
+// const FavoriteDisplay = () => {
+//   const { user } = useAuth0();
+//   const [favoriteImages, setFavoriteImages] = useState<{ title: string }[]>([]);
 
-  // useEffect(() => {
-  //   const fetchFavorites = async () => {
-  //     if (user) {
-  //       try {
-  //         // Antag att denna endpoint returnerar en array av FavPic objekt
-  //         const response = await axios.get<FavPic[]>(
-  //           `http://localhost:3000/users/${user.sub}/favorites`
-  //         );
-  //         setFavoritePics(response.data);
-  //       } catch (error) {
-  //         console.error("Error fetching favorite pictures:", error);
-  //       }
-  //     }
-  //   };
+//   useEffect(() => {
+//     if (!user || !user.sub) return; // Kontrollerar att user och user.sub finns
 
-  //   fetchFavorites();
-  // }, [user]);
+//     const userId = user.sub; // Extraherar userId från user-objektet
+//     const url = `http://localhost:3000/users/:userId/favorites`; // Dynamiskt bygger URL med användar-ID
 
-  return (
-    <div>
-      {/* <h2>My Favorites</h2>
-      <div className="image-grid">
-        {favoritePics.map((image, index) => (
-          <div key={index}>
-            <img src={image.link} alt={image.title} /> <p>{image.title}</p>
-          </div>
-        ))}
-      </div> */}
-    </div>
-  );
-};
+//     const fetchData = async () => {
+//       try {
+//         const response = await axios.get(url); // Använder den dynamiskt byggda URL:en för förfrågan
+//         setFavoriteImages(response.data);
+//       } catch (error: any) {
+//         console.error(
+//           "There was a problem with the axios operation:",
+//           error.response ? error.response.data : error
+//         );
+//       }
+//     };
 
-export default FavPics;
+//     fetchData();
+//   }, [user?.sub]); // Beroende på user.sub för att återköra effekten när användarinformationen ändras
+// };
+
+// export default FavoriteDisplay;
