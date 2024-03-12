@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
 interface SearchBarProps {
-  onSearch: (searchTerm: string) => void; 
+  onSearch: (searchTerm: string) => void;
 }
 
 export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState(""); 
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -13,18 +13,19 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSearch(searchTerm); 
+    onSearch(searchTerm);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Sök..."
+        placeholder="Your next favorite pic..."
         value={searchTerm}
         onChange={handleSearchChange}
+        className="placeholder"
       />
-      <button type="submit">Sök</button>
+      <button type="submit">Search</button>
     </form>
   );
 };

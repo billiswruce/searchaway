@@ -66,31 +66,58 @@
   gap: 10px;
 }
 
+.chatBubble {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+input[type="text"]::placeholder {
+  color: #53a064;
+}
+
 form {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Skapar lite utrymme mellan input-fältet och knappen */
+  gap: 10px;
+  margin-bottom: 120px;
 }
 
 input[type="text"] {
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 3px solid #85c994;
   border-radius: 5px; /* Rundade hörn på vänster sida */
   outline: none;
   width: 50%;
+  font-weight: bold;
+  background: rgb(251, 245, 220);
+  color: #68ca7e;
 }
 
 button[type="submit"] {
   padding: 10px 20px;
-  border: 2px solid #ccc;
-  background-color: #f8f8f8;
+  background-color: #68ca7e;
+  border: 2px solid #68ca7e;
   cursor: pointer;
   border-radius: 5px; /* Rundade hörn på höger sida */
   width: 100px;
+  color: #ebfefd;
+  font-weight: bold;
 }
 
-button[type="submit"]:hover {
-  background-color: #e7e7e7;
+button {
+  background-color: #68ca7e;
+  border: 2px solid #68ca7e;
+  cursor: pointer;
+  border-radius: 5px; /* Rundade hörn på höger sida */
+  color: #ebfefd;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover,
+button:hover {
+  background-color: #82da95;
+  border: 2px solid #82da95;
+  color: #daf8e0;
 }
 
 /* För mindre skärmar, visa endast två bilder per rad */
