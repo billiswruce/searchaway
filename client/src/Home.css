@@ -93,3 +93,23 @@
   cursor: pointer;
   padding: 5px;
 }
+
+.image-grid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* För mindre skärmar, visa endast två bilder per rad */
+@media (max-width: 800px) {
+  .image-grid2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* För ännu mindre skärmar, visa endast en bild per rad */
+@media (max-width: 500px) {
+  .image-grid2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

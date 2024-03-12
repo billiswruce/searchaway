@@ -1,6 +1,6 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./LogoutButton";
-import FavPics from "./FavPics";
+import FavPicsBtn from "./FavPicsBtn";
 
 const Navbar = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -20,7 +20,7 @@ const Navbar = () => {
               style={{ marginRight: "8px" }}
             />
             <LogoutButton />
-            {/* <FavPics userId={undefined} /> */}
+            <FavPicsBtn />
           </>
         )}
       </div>
