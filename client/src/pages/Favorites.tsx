@@ -37,7 +37,7 @@ const Favorites = () => {
       <button onClick={() => navigate(-1)} style={{ marginBottom: "20px" }}>
         Go back to search
       </button>{" "}
-      <div className="image-grid">
+      <div className="image-grid2">
         {favoriteImages.map((image, index) => (
           <div key={index}>
             <h3>{image.title}</h3>
