@@ -39,24 +39,26 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     }
   };
 
+  //definierar en asynkron funktion som sparar favoriter
   const saveFavorites = async (image: {
     title: string;
     byteSize: number;
     link: string;
   }) => {
-    if (!user || !user.sub) return;
+    if (!user || !user.sub) return; //avbryter om användaren inte är inloggad
 
-    const updatedFavorites = new Set(favorites);
-    updatedFavorites.add(image.link);
-    setFavorites(updatedFavorites);
+    const updatedFavorites = new Set(favorites); //skapar en kopia av favorites
+    updatedFavorites.add(image.link); //lägger till bilden i kopian
+    setFavorites(updatedFavorites); //uppdaterar favorites med kopian
 
     try {
       const favoriteObject = {
+        //skapar ett objekt med bilden som ska sparas
         title: image.title,
         byteSize: image.image.byteSize,
         link: image.link,
       };
-
+      //använder axios för att skicka en POST-förfrågan till servern
       const response = await axios.post("http://localhost:3000/users", {
         userId: user.sub,
         favorites: [favoriteObject],
@@ -70,19 +72,19 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       );
     }
   };
+
   return (
     <div style={{ textAlign: "center" }}>
       {isAuthenticated ? (
         <>
           <img src={icon} alt="chatbubble" className="chatBubble"></img>
-          <SearchBar onSearch={handleSearch} className="searchBar" />
           {spelling && (
             <p>
               Did you mean{" "}
               <span
                 style={{
                   cursor: "pointer",
-                  color: "blue",
+                  color: "#53a064",
                   textDecoration: "underline",
                 }}
                 onClick={handleSpellingClick}>
@@ -91,6 +93,8 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               ?
             </p>
           )}
+          <SearchBar onSearch={handleSearch} />
+
           <div className="image-grid">
             {images.map(
               (

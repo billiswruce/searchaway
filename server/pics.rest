@@ -1,4 +1,4 @@
-GET http://localhost:3000/users/${userId}/favorites
+GET http://localhost:3000/users/exampleID/favorites
 
 ### Spara en användares favoritbild
 POST http://localhost:3000/users/
