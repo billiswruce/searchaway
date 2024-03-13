@@ -66,8 +66,12 @@
   gap: 10px;
 }
 
+.loading {
+  color: #53a064;
+}
+
 .chatBubble {
-  margin-top: 50px;
+  margin-top: 45px;
   margin-bottom: 50px;
 }
 
@@ -79,7 +83,7 @@ form {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
 }
 
 input[type="text"] {

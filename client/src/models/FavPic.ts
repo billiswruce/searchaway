@@ -1,4 +1,4 @@
-export interface FavPic {
+export interface FavPic2 {
   // image: any;
   // link: string | undefined;
   // title: string | undefined;
@@ -8,4 +8,15 @@ export interface FavPic {
     byteSize: number;
     link: string;
   }[];
+}
+
+export interface FavPic {
+  user: string;
+  favoritePics: {
+    title: string;
+    link: string;
+    image: {
+      byteSize: number;
+    };
+  };
 }
