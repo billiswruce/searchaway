@@ -1,15 +1,3 @@
-export interface FavPic2 {
-  // image: any;
-  // link: string | undefined;
-  // title: string | undefined;
-  user: string;
-  favoritePics: {
-    title: string;
-    byteSize: number;
-    link: string;
-  }[];
-}
-
 export interface FavPic {
   user: string;
   favoritePics: {
@@ -17,6 +5,12 @@ export interface FavPic {
     link: string;
     image: {
       byteSize: number;
+      contextLink: string;
+      height: number;
+      thumbnailHeight: number;
+      thumbnailLink: string;
+      thumbnailWidth: number;
+      width: number;
     };
   };
 }
