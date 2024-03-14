@@ -9,6 +9,10 @@
   background-color: rgb(251, 245, 220);
 }
 
+.profileimg {
+  border-radius: 50%;
+}
+
 .navbar {
   width: 100%;
   margin: 0;
@@ -25,18 +29,11 @@
 
 .navbar img {
   height: 40px;
-  border-radius: 50%;
   margin-right: 0.5rem;
 }
 
 .navbar button {
   margin-left: 1rem;
-}
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
 }
 
 .image-container {
@@ -108,7 +105,7 @@ button[type="submit"] {
   background-color: #68ca7e;
   border: 2px solid #68ca7e;
   cursor: pointer;
-  border-radius: 5px; /* Rundade hörn på höger sida */
+  border-radius: 5px;
   width: 100px;
   color: #ebfefd;
   font-weight: bold;
@@ -118,7 +115,7 @@ button {
   background-color: #68ca7e;
   border: 2px solid #68ca7e;
   cursor: pointer;
-  border-radius: 5px; /* Rundade hörn på höger sida */
+  border-radius: 5px;
   color: #ebfefd;
   font-weight: bold;
 }
@@ -132,6 +129,40 @@ button:hover {
 
 /* två bilder per rad */
 @media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .navbar img,
+  .navbar button {
+    margin: 0.5rem 0;
+  }
+  .navbar img {
+    margin-left: 20px;
+  }
+
+  .navbar button {
+    margin-left: 25px;
+  }
+
+  .chatBubble {
+    height: 150px;
+    margin-top: 80px;
+  }
+
+  form,
+  .searchBar {
+    flex-direction: column;
+  }
+
+  button[type="submit"],
+  input[type="text"],
+  .searchBar button {
+    width: auto;
+  }
   .image-grid2,
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -140,8 +171,16 @@ button:hover {
 
 /* en bild per rad */
 @media (max-width: 500px) {
+  .chatBubble {
+    margin-bottom: 50px;
+  }
+
   .image-grid2,
   .image-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  navbar {
+    align-items: center;
   }
 }

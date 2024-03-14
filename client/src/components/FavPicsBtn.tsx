@@ -18,11 +18,7 @@ const FavPicsBtn = () => {
         padding: "0",
         cursor: "pointer",
       }}>
-      <img
-        src={heart2}
-        alt="Favorites"
-        style={{ width: "24px", height: "24px" }}
-      />
+      <img src={heart2} alt="Favorites" className="navbar-heart" />
     </button>
   );
 };

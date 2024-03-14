@@ -17,12 +17,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       title: string;
       image: {
         byteSize: number;
-        // contextLink: string;
-        // height: number;
-        // thumbnailHeight: number;
-        // thumbnailLink: string;
-        // thumbnailWidth: number;
-        // width: number;
       };
     }[]
   >([]);
@@ -60,12 +54,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     link: string;
     image: {
       byteSize: number;
-      // contextLink: string;
-      // height: number;
-      // thumbnailHeight: number;
-      // thumbnailLink: string;
-      // thumbnailWidth: number;
-      // width: number;
     };
   }) => {
     if (!user || !user.sub) return; //avbryter om användaren inte är inloggad
@@ -139,12 +127,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
                           link: string;
                           image: {
                             byteSize: number;
-                            // contextLink: string;
-                            // height: number;
-                            // thumbnailHeight: number;
-                            // thumbnailLink: string;
-                            // thumbnailWidth: number;
-                            // width: number;
                           };
                         }
                       )
