@@ -1,4 +1,4 @@
-<img width="1675" alt="Skärmavbild 2024-03-14 kl  09 47 43" src="https://github.com/billiswruce/imagesearchapp/assets/98770226/29e67a50-99be-4c4e-bb7e-28b0c24c548f">
+<img width="1675" alt="Skärmavbild 2024-03-14 kl  09 47 43" src="https://github.com/billiswruce/imgsearch/assets/98770226/e5e40a7a-5b0e-4841-916f-a0b630838746">
 
 # Search Away! 
 Fullstack Image Search App with Google Custom Search and Auth0
