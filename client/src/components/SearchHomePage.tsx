@@ -11,7 +11,21 @@ import icon from "../img/icon.png";
 
 export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   const { user, isAuthenticated } = useAuth0();
-  const [images, setImages] = useState([]);
+  const [images, setImages] = useState<
+    {
+      link: string;
+      title: string;
+      image: {
+        byteSize: number;
+        // contextLink: string;
+        // height: number;
+        // thumbnailHeight: number;
+        // thumbnailLink: string;
+        // thumbnailWidth: number;
+        // width: number;
+      };
+    }[]
+  >([]);
   const [searchTime, setSearchTime] = useState("");
   const [spelling, setSpelling] = useState("");
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
@@ -27,9 +41,9 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       } else {
         setSpelling("");
       }
-      console.log("Search results:", results.items);
+      console.log("Client/Search results:", results.items);
     } catch (error) {
-      console.error("Fetch error:", error);
+      console.error("Client/Fetch error:", error);
     }
   };
 
@@ -44,6 +58,15 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     title: string;
     byteSize: number;
     link: string;
+    image: {
+      byteSize: number;
+      // contextLink: string;
+      // height: number;
+      // thumbnailHeight: number;
+      // thumbnailLink: string;
+      // thumbnailWidth: number;
+      // width: number;
+    };
   }) => {
     if (!user || !user.sub) return; //avbryter om användaren inte är inloggad
 
@@ -64,10 +87,10 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
         favorites: [favoriteObject],
       });
 
-      console.log("Favorite saved successfully:", response.data);
+      console.log("Client/Favorite saved successfully:", response.data);
     } catch (error: any) {
       console.error(
-        "Error saving favorites:",
+        "Client/Error saving favorites:",
         error.response ? error.response.data : error
       );
     }
@@ -98,13 +121,34 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
           <div className="image-grid">
             {images.map(
               (
-                image: { link: string; title: string; byteSize: number },
+                image: {
+                  link: string;
+                  title: string;
+                  image: { byteSize: number };
+                },
                 index: number
               ) => (
                 <div key={index} className="image-container">
                   <img src={image.link} alt={image.title} className="image" />
                   <button
-                    onClick={() => saveFavorites(image)}
+                    onClick={() =>
+                      saveFavorites(
+                        image as {
+                          title: string;
+                          byteSize: number;
+                          link: string;
+                          image: {
+                            byteSize: number;
+                            // contextLink: string;
+                            // height: number;
+                            // thumbnailHeight: number;
+                            // thumbnailLink: string;
+                            // thumbnailWidth: number;
+                            // width: number;
+                          };
+                        }
+                      )
+                    }
                     className="favorite-button">
                     <img
                       src={isFavorite(image.link) ? heart2 : heart1}

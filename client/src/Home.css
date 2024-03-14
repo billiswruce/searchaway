@@ -70,6 +70,12 @@
   color: #53a064;
 }
 
+h2 {
+  color: #53a064;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
 .chatBubble {
   margin-top: 45px;
   margin-bottom: 50px;
@@ -124,16 +130,18 @@ button:hover {
   color: #daf8e0;
 }
 
-/* För mindre skärmar, visa endast två bilder per rad */
+/* två bilder per rad */
 @media (max-width: 800px) {
-  .image-grid2 {
+  .image-grid2,
+  .image-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* För ännu mindre skärmar, visa endast en bild per rad */
+/* en bild per rad */
 @media (max-width: 500px) {
-  .image-grid2 {
+  .image-grid2,
+  .image-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
