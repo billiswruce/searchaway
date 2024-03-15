@@ -16,8 +16,8 @@ Fullstack Image Search App with Google Custom Search and Auth0
 
 - Make sure you have node.js installed
 - Clone repository from [Github](https://github.com/billiswruce/imagesearchapp/)
-- Open your Terminal
-- New Terminal for Client: First`cd client` then run `npm i` and `npm run dev`
+- Open your Terminal in VS Code (or preferred developing tool)
+- New Terminal for Client: First `cd client` then run `npm i` and `npm run dev`
 - New Terminal for Server: First`cd server` Run `npm i` and `node server`
 - Navigate to http://localhost:5173/ in your browser to use the app
 
