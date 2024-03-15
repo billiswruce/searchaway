@@ -9,7 +9,7 @@
   background-color: rgb(251, 245, 220);
 }
 
-.profileimg {
+.profile-img {
   border-radius: 50%;
 }
 
@@ -57,7 +57,8 @@
   padding: 5px;
 }
 
-.image-grid2 {
+.image-grid2,
+.image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -67,7 +68,8 @@
   color: #53a064;
 }
 
-h2 {
+h2,
+h1 {
   color: #53a064;
   margin-top: 0px;
   margin-bottom: 30px;
@@ -79,7 +81,17 @@ h2 {
 }
 
 input[type="text"]::placeholder {
-  color: #53a064;
+  color: #53a06482;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logincloud {
+  margin-bottom: 20px;
 }
 
 form {

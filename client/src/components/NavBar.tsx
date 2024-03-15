@@ -19,8 +19,8 @@ const Navbar = () => {
               alt="Profilbild"
               style={{ marginRight: "8px" }}
             />
-            <LogoutButton />
             <FavPicsBtn />
+            <LogoutButton />
           </>
         )}
       </div>

@@ -11,6 +11,12 @@ import icon from "../img/icon.png";
 
 export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   const { user, isAuthenticated } = useAuth0();
+  const [searchTime, setSearchTime] = useState("");
+  const [spelling, setSpelling] = useState("");
+  const [favorites, setFavorites] = useState<Set<string>>(new Set());
+  const isFavorite = (imageLink: string) => favorites.has(imageLink); // håller koll så en bild är favoritmarkerad
+
+  //tillstånd för att spara bilder från sök
   const [images, setImages] = useState<
     {
       link: string;
@@ -20,11 +26,8 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       };
     }[]
   >([]);
-  const [searchTime, setSearchTime] = useState("");
-  const [spelling, setSpelling] = useState("");
-  const [favorites, setFavorites] = useState<Set<string>>(new Set());
-  const isFavorite = (imageLink: string) => favorites.has(imageLink);
 
+  //hanterar sökningar, anropar, sparar, kontrollerar spelling, tid och uppdaterar tillstånd
   const handleSearch = async (searchTerm: string) => {
     try {
       const results = await searchImages(searchTerm);
@@ -41,13 +44,14 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     }
   };
 
+  //stavningsförslag
   const handleSpellingClick = () => {
     if (spelling) {
-      handleSearch(spelling);
+      handleSearch(spelling); // gör ny sökning utifrån förslag
     }
   };
 
-  //definierar en asynkron funktion som sparar favoriter
+  //sparar favoriter
   const saveFavorites = async (image: {
     title: string;
     byteSize: number;
@@ -58,18 +62,21 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   }) => {
     if (!user || !user.sub) return; //avbryter om användaren inte är inloggad
 
-    const updatedFavorites = new Set(favorites); //skapar en kopia av favorites
-    updatedFavorites.add(image.link); //lägger till bilden i kopian
+    //skapar ny mängd favoriter med kopian av den gamla
+    const updatedFavorites = new Set(favorites);
+    updatedFavorites.add(image.link); //lägger till bilden som favorit
     setFavorites(updatedFavorites); //uppdaterar favorites med kopian
 
     try {
+      //skapar objekt för favoritmarkerade bilden
       const favoriteObject = {
         //skapar ett objekt med bilden som ska sparas
         title: image.title,
         byteSize: image.image.byteSize,
         link: image.link,
       };
-      //använder axios för att skicka en POST-förfrågan till servern
+
+      //skickar en POST-förfrågan till servern för att spara bilden
       const response = await axios.post("http://localhost:3000/users", {
         userId: user.sub,
         favorites: [favoriteObject],
@@ -84,6 +91,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
     }
   };
 
+  //renderar ut JSX för UI + lite styling för att visa bilder och favoritmarkering
   return (
     <div style={{ textAlign: "center" }}>
       {isAuthenticated ? (
@@ -150,7 +158,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
         </>
       ) : (
         <>
-          <h1>Log in to search</h1>
           <LoginButton />
         </>
       )}

@@ -9,10 +9,9 @@ const Profile = () => {
   }
 
   return (
-    //&& som renderar ut profilens visningsbild om är true/authenticated
     isAuthenticated && (
       <div>
-        <img src={user?.picture} className="profileimg" />
+        <img src={user?.picture} className="profile-img" />
       </div>
     )
   );

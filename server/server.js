@@ -41,12 +41,16 @@ app.get(`/users/:userId/favorites`, async (req, res) => {
 });
 
 app.post("/users", async (req, res) => {
+  console.log(
+    "Server/Recieved request to add or update user's favorite images."
+  );
   ///rutt för att lägga till eller uppdatera användares favoritbilder
-  const { error } = favPicSchema.validate(req.body); //validerar inkommande data mot FavPicSchema
+  const { error, value } = favPicSchema.validate(req.body); //validerar inkommande data mot FavPicSchema
   if (error) {
     //om det finns fel i inkommande data
     return res.status(400).send(error.details[0].message);
   }
+  console.log("Server/Validation succesful.", value);
   const { userId, favorites } = req.body; //hämtar userId och favorites från inkommande data
   try {
     console.log("Server/Reading from users.json for update"); //läser från users.json asynkront med await
