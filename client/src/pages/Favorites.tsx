@@ -19,7 +19,6 @@ const Favorites = () => {
     const userId = user.sub;
     const url = `http://localhost:3000/users/${userId}/favorites`;
 
-    //hämtar data från servern med asynkron funktion
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
@@ -33,7 +32,7 @@ const Favorites = () => {
     };
 
     fetchData();
-  }, [user?.sub]);
+  }, [user?.sub]); //körs när user.sub ändras
 
   return (
     <div>
@@ -51,7 +50,7 @@ const Favorites = () => {
           <div key={index} className="image-container">
             <img src={image.link} alt={image.title} className="image" />
             <button
-              // onClick={() => deleteFavorite(image.link)}
+              // onClick={() => deleteFavorite(image.link)} //work in progress
               className="delete-button"
               style={{ alignSelf: "flex-end" }}>
               <img
