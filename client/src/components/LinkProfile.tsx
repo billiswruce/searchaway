@@ -4,7 +4,6 @@ const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    //om isLoading är true så renderas "Loading ..."
     return <div className="loading">Loading ...</div>;
   }
 

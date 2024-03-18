@@ -5,7 +5,7 @@ const FavPicsBtn = () => {
   const navigate = useNavigate();
 
   const navigateToFavorites = () => {
-    navigate("/favorites"); // Navigera till /favorites sidan
+    navigate("/favorites");
   };
 
   return (

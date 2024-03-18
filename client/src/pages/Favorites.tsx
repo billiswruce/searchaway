@@ -32,7 +32,7 @@ const Favorites = () => {
     };
 
     fetchData();
-  }, [user?.sub]); //körs när user.sub ändras
+  }, [user?.sub]);
 
   return (
     <div>
