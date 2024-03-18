@@ -3,7 +3,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 import heart2 from "../img/heart2.svg";
-import trash from "../img/trash.svg"; // Se till att sökvägen till din bild är korrekt
+import trash from "../img/trash.svg";
 
 const Favorites = () => {
   const { user } = useAuth0();
@@ -51,8 +51,7 @@ const Favorites = () => {
             <button
               // onClick={() => deleteFavorite(image.link)}
               className="delete-button"
-              style={{ alignSelf: "flex-end" }} // Tillämpa denna stil om nödvändigt
-            >
+              style={{ alignSelf: "flex-end" }}>
               <img
                 src={trash}
                 alt="Delete"
