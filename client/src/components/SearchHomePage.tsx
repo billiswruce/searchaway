@@ -13,6 +13,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
   const { user, isAuthenticated } = useAuth0();
   const [searchTime, setSearchTime] = useState("");
   const [spelling, setSpelling] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [favorites, setFavorites] = useState<Set<string>>(new Set());
   const isFavorite = (imageLink: string) => favorites.has(imageLink);
 
@@ -36,6 +37,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       } else {
         setSpelling("");
       }
+      setSearchTerm(searchTerm); // Sätt söktermen för att behålla den i sökfältet
     } catch (error) {
       console.error("Client/Fetch error:", error);
     }
@@ -102,7 +104,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               ?
             </p>
           )}
-          <SearchBar onSearch={handleSearch} correctedTerm={spelling} />
+          <SearchBar onSearch={handleSearch} correctedTerm={searchTerm} />
 
           <div className="image-grid">
             {images.map(
