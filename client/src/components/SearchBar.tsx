@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface SearchBarProps {
   onSearch: (searchTerm: string) => void;
+  correctedTerm?: string;
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+export const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  correctedTerm,
+}) => {
+  const [searchTerm, setSearchTerm] = useState(correctedTerm || "");
+
+  useEffect(() => {
+    if (correctedTerm && correctedTerm !== searchTerm) {
+      setSearchTerm(correctedTerm);
+    }
+  }, [correctedTerm, searchTerm]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
