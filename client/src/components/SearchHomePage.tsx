@@ -102,7 +102,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               ?
             </p>
           )}
-          <SearchBar onSearch={handleSearch} />
+          <SearchBar onSearch={handleSearch} correctedTerm={spelling} />
 
           <div className="image-grid">
             {images.map(
