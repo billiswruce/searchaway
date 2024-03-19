@@ -13,9 +13,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   useEffect(() => {
     if (correctedTerm && correctedTerm !== searchTerm) {
-      setSearchTerm(correctedTerm);
+      setSearchTerm(searchTerm);
     }
-  }, [correctedTerm, searchTerm]);
+  }, [correctedTerm]);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
@@ -24,6 +24,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     onSearch(searchTerm);
+    setSearchTerm("");
   };
 
   return (
