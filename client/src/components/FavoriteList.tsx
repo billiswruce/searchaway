@@ -49,7 +49,7 @@ const Favorites = () => {
           <div key={index} className="image-container">
             <img src={image.link} alt={image.title} className="image" />
             <button
-              // onClick={() => deleteFavorite(image.link)}
+              // onClick={() => deleteFavorite(image.link)} work in progress
               className="delete-button"
               style={{ alignSelf: "flex-end" }}>
               <img

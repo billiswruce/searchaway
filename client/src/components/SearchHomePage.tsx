@@ -105,7 +105,11 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
             </p>
           )}
           <SearchBar onSearch={handleSearch} correctedTerm={searchTerm} />
-
+          {searchTime && (
+            <p style={{ color: "#53a064" }}>
+              The search took {searchTime} seconds
+            </p>
+          )}
           <div className="image-grid">
             {images.map(
               (
@@ -142,11 +146,6 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
               )
             )}
           </div>
-          {searchTime && (
-            <p style={{ color: "#53a064", fontWeight: "bold" }}>
-              The search took {searchTime} seconds
-            </p>
-          )}
         </>
       ) : (
         <>

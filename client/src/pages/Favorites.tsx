@@ -12,7 +12,6 @@ const Favorites = () => {
   >([]);
   const navigate = useNavigate();
 
-  //useEffect hook som körs när komponenten renderas och när user.sub ändras
   useEffect(() => {
     if (!user || !user.sub) return;
 

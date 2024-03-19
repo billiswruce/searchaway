@@ -56,6 +56,10 @@ app.post("/users", async (req, res) => {
   }
 });
 
+// app.delete(`/users/:userId/favorites`, async (req, res) => {
+// work in progress
+// });
+
 app.listen(3000, () => {
   console.log("Server is up!".rainbow.bold);
 });
