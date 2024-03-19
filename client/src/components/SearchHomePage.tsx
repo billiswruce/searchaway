@@ -37,7 +37,7 @@ export const SearchHomePage: React.FC<{ results: FavPic[] }> = ({}) => {
       } else {
         setSpelling("");
       }
-      setSearchTerm(searchTerm); // Sätt söktermen för att behålla den i sökfältet
+      setSearchTerm(searchTerm);
     } catch (error) {
       console.error("Client/Fetch error:", error);
     }

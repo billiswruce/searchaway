@@ -13,7 +13,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
   useEffect(() => {
     if (correctedTerm && correctedTerm !== searchTerm) {
-      setSearchTerm(correctedTerm); // Sätt searchTerm till correctedTerm
+      setSearchTerm(correctedTerm);
     }
   }, [correctedTerm]);
 
