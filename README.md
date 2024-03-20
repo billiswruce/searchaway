@@ -17,7 +17,8 @@ Fullstack Image Search App with Google Custom Search and Auth0
 - Make sure you have node.js installed
 - Google Custom Search with JSON API Key and ID 
 - Auth0 application with auth0 domain and client-id
-- create an .env file with following: 
+- When the repository is cloned and set up is done:
+- Create an .env file with following: 
 ```plaintext
 VITE_AUTH0_DOMAIN={your_auth0_domain}
 VITE_AUTH0_CLIENT_ID={your_auth0_client_id}
