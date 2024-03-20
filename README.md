@@ -18,7 +18,7 @@ Fullstack Image Search App with Google Custom Search and Auth0
 - Google Custom Search with JSON API Key and ID 
 - Auth0 application with auth0 domain and client-id
 - When the repository is cloned and set up is done:
-- Create an .env file with following: 
+- Create an .env file in client with following: 
 ```plaintext
 VITE_AUTH0_DOMAIN={your_auth0_domain}
 VITE_AUTH0_CLIENT_ID={your_auth0_client_id}
